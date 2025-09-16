@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroWeather India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/logo.jpg" alt="Agrisakha Logo" id="logo">
+                <div class="header-text">
+                    <h1 data-translate="title">AgroWeather India</h1>
+                    <p data-translate="subtitle">Your trusted partner in farming</p>
+                </div>
+                <div id="language-selector">
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="mr">मराठी</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="gu">ગુજરાતી</option>
+                        <option value="ur">اردو</option>
+                        <option value="kn">ಕನ್ನಡ</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section id="location-selection" class="card">
+                <h2 data-translate="select_location">📍 Select Your Location</h2>
+                <div class="location-inputs">
+                    <select id="state-select">
+                        <option value="" data-translate="select_state">Select State</option>
+                        <!-- States will be populated here by script.js -->
+                    </select>
+                    <select id="city-select">
+                        <option value="" data-translate="select_city">Select City</option>
+                        <!-- Cities will be populated here by script.js -->
+                    </select>
+                </div>
+            </section>
+
+            <div class="cards-container">
+                <section id="weather-report" class="card">
+                    <h2 data-translate="live_weather">☀️ Live Weather Report</h2>
+                    <div id="weather-data">
+                        <div class="spinner"></div>
+                        <p data-translate="select_location_weather">Select a location to see the weather.</p>
+                    </div>
+                </section>
+                <section id="crop-recommendation" class="card">
+                    <h2 data-translate="crop_recommendation">🌱 Crop Recommendation</h2>
+                    <div id="recommendation-data">
+                        <div class="spinner"></div>
+                        <p data-translate="crop_suggestions">Weather-based crop suggestions will appear here.</p>
+                    </div>
+                </section>
+            </div>
+
+            <section id="hyperlocal-forecast" class="card">
+                <h2>📍 Hyperlocal Forecast</h2>
+                <button id="get-hyperlocal-forecast">Get Hyperlocal Forecast</button>
+                <div id="hyperlocal-data">
+                    <!-- Hyperlocal forecast will be displayed here -->
+                </div>
+            </section>
+
+            <section id="farmer-input" class="card">
+                <h2 data-translate="your_crop_info">🌾 Your Crop Information</h2>
+                <label for="planted-crop" data-translate="what_crop">What crop have you planted?</label>
+                <input type="text" id="planted-crop" placeholder="e.g., Wheat, Rice">
+                <button id="submit-crop" data-translate="get_advice">Get Advice</button>
+                <div id="next-steps">
+                    <!-- Next steps for the farmer will be displayed here -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AgroWeather India</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
